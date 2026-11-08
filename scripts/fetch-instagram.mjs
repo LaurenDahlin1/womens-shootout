@@ -11,6 +11,16 @@ const JSON_PATH = path.join(DATA_DIR, "instagram.json");
 const PROFILE_URL = "https://www.instagram.com/womens.shootout.tucson/";
 const HANDLE = "womens.shootout.tucson";
 const MAX_POSTS = 6;
+const FACEBOOK_GRAPH = "https://graph.facebook.com/v23.0";
+const INSTAGRAM_GRAPH = "https://graph.instagram.com";
+
+function isInstagramLoginToken(token) {
+  return /^IGAA/i.test(token);
+}
+
+function graphBase(token) {
+  return isInstagramLoginToken(token) ? INSTAGRAM_GRAPH : FACEBOOK_GRAPH;
+}
 
 function readExisting() {
   if (!existsSync(JSON_PATH)) {
@@ -42,7 +52,10 @@ function altFromCaption(caption) {
 }
 
 async function refreshLongLivedToken(token) {
-  const url = new URL("https://graph.instagram.com/refresh_access_token");
+  if (!isInstagramLoginToken(token)) {
+    return token;
+  }
+  const url = new URL(`${INSTAGRAM_GRAPH}/refresh_access_token`);
   url.searchParams.set("grant_type", "ig_refresh_token");
   url.searchParams.set("access_token", token);
   const response = await fetch(url);
@@ -69,7 +82,7 @@ async function downloadMedia(id, sourceUrl) {
 }
 
 async function fetchMedia(token, userId) {
-  const url = new URL(`https://graph.instagram.com/${userId}/media`);
+  const url = new URL(`${graphBase(token)}/${userId}/media`);
   url.searchParams.set(
     "fields",
     "id,caption,media_type,media_url,permalink,thumbnail_url,timestamp,like_count,comments_count",
