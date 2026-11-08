@@ -1,6 +1,79 @@
 {
-  "fetchedAt": null,
-  "upcoming": [],
-  "additionalShootout": [],
-  "sisterClubEvents": []
+  "fetchedAt": "2026-11-08T01:50:25.664Z",
+  "upcoming": [
+    {
+      "id": "3547037715729017000",
+      "clubName": "Women’s Shootout",
+      "title": "University and Euclid Start Women's Shootout 11/14 7:30am",
+      "startsAt": "2026-11-14T14:30:00.000Z",
+      "timezone": "America/Phoenix",
+      "description": "New experimental start, BIG Shootout energy! 🚴‍♀️🔥 In an effort to grow the Women’s Shootout and promote women’s cycling, we’re experimenting with a new start location on the second Saturday of each month! 📍 University & Euclid 🕖 Please arrive by 7:30 AM 🚴‍♀️ Rollout around 7:37 AM, just after the “Old Man” group of the main Shootout. We’re trying this out with the blessing of Fair Wheel Bikes, and we’re excited to see how it goes! To the men reading this who ride the co-ed Shootout: Help us spread the word to women who might want to join! And please give our group a little space as we roll out so we can stay together. New to WSO? Look for the helmet with the hot pink mohawk! 💗 Let’s get more women riding the Shootout! 💪",
+      "stravaUrl": "https://www.strava.com/clubs/1245841/group_events/3547037715729017000",
+      "isWomenOnly": true
+    },
+    {
+      "id": "3547037656259754500",
+      "clubName": "Women’s Shootout",
+      "title": "WSO 102 Miles @El Tour de Tucson 11/21 7am",
+      "startsAt": "2026-11-21T14:00:00.000Z",
+      "timezone": "America/Phoenix",
+      "description": "RSVP here to let us know you will be on the 102 mile route! There is a separate event for the 62 mile (metric century) distance. We will be cheering for you!",
+      "stravaUrl": "https://www.strava.com/clubs/1245841/group_events/3547037656259754500",
+      "isWomenOnly": true
+    }
+  ],
+  "additionalShootout": [
+    {
+      "id": "3547037610275170000",
+      "clubName": "Women’s Shootout",
+      "title": "WSO 62 Miles @El Tour de Tucson 11/21 9am",
+      "startsAt": "2026-11-21T16:00:00.000Z",
+      "timezone": "America/Phoenix",
+      "description": "RSVP here to let us know you will be on the 62 mile route! There is a separate event for the 102 mile (century) distance. We will be cheering for you!",
+      "stravaUrl": "https://www.strava.com/clubs/1245841/group_events/3547037610275170000",
+      "isWomenOnly": true
+    },
+    {
+      "id": "3547037543494117000",
+      "clubName": "Women’s Shootout",
+      "title": "FROM THE ANNEX Women's Shootout 11/28 7:30am",
+      "startsAt": "2026-11-28T14:30:00.000Z",
+      "timezone": "America/Phoenix",
+      "description": "We will start in front of the Mercado Annex. They have graciously allowed us to use their bathrooms. There is no official B group this week, but we are always happy to have a B group if the B ladies are okay with not having an official ride leader. If you would like to be a B group leader, please let us know and we will officially advertise it. This ride is every week, but we individually list each ride. Regular info below. *** FAQ How fast? The \"A\" group averages 18-20mph. On the second Saturday only, we also have a \"B\" group that averages 15-17mph. No drop? This is NOT a no drop ride. However, we wait five minutes to regroup at The Bridge (Mile 15.5) and Sprint Hill (Mile 26). These are also our sprint points for \"friendly competition.\" What can I expect? We usually ride in two lines and rotate. The rider at the front right is in the wind and doing the most work. When you’re ready to pull off, or if you can’t hold the group’s speed, move left and slide back into the left-hand line. Pulls can be long or short. How long? The full shootout route is 65 miles, but most of us ride to Sprint Hill, which is 49. The shorter turnaround points you can do are: The Bridge (32 miles total distance) and Helmet Peak Rd (42 miles). Where? We roll from in front of the MSA Annex, a couple blocks from the Mercado San Augustin. When? The time changes with the seasons/sunrise. Check our Strava event for the exact time. Parking? There is paid parking in the Mercado parking lots and free parking on side streets. Stops/refueling? Ladies doing the full route will stop at a gas station about halfway through. If you are planning to turn around earlier, plan to carry all of your nutrition and hydration. Other questions? Interested in becoming a ride leader? Email wso [dot] tucson [at] gmail",
+      "stravaUrl": "https://www.strava.com/clubs/1245841/group_events/3547037543494117000",
+      "isWomenOnly": true
+    },
+    {
+      "id": "3547037237035420700",
+      "clubName": "Women’s Shootout",
+      "title": "Winterhaven Slow Roll 12/17 6:15pm from Hop Shop - Lights Required",
+      "startsAt": "2026-12-18T01:15:00.000Z",
+      "timezone": "America/Phoenix",
+      "description": "The third annual WSO Winterhaven slow roll, starting and ending at Hop Shop. You must have lights. Mountain and commuter bikes are recommended due to the pace of the ride. If you want to ride your road bike, wear sneakers. Kids and male friends/partners are welcome if joining as a guest of a woman rider, but they must also have lights. Please be sure to have adequate clothing. Festive attire encouraged. Although Winterhaven is typically crowded, this event is early enough that we don't usually have issues with crowds. (Winterhaven opens at 6pm.)",
+      "stravaUrl": "https://www.strava.com/clubs/1245841/group_events/3547037237035420700",
+      "isWomenOnly": true
+    }
+  ],
+  "sisterClubEvents": [
+    {
+      "id": "3417572658232492000",
+      "clubName": "Ladies on Lemmon",
+      "title": "Mount Lemmon",
+      "startsAt": "2026-11-09T15:00:00.000Z",
+      "timezone": "America/Phoenix",
+      "description": "Meet in Madera Village near the Dental Office. Will ride together to the base of Mount Lemmon (MP0) and then we will ride at our own pace for as little or as far as you want to go up Lemmon. All ladies are welcome! Hope to see you there!",
+      "stravaUrl": "https://www.strava.com/clubs/1489581/group_events/3417572658232492000",
+      "isWomenOnly": false
+    },
+    {
+      "id": "1798339",
+      "clubName": "Monthly Women’s Ride",
+      "title": "Rancho Vistoso Ride",
+      "startsAt": "2026-11-29T14:30:00.000Z",
+      "timezone": "America/Phoenix",
+      "description": "TIME CHANGE roll out at 7:30am Monthly Women’s Ride We meet the last Sunday of the month unless it’s a holiday. The ride starts from the intersection of Mountain and the Rillito Path (north side by the javelina statue that was vandalized)- not actually Via Entrada. Location is pinned on the map. 4O-ish mile ride; has multiple join-on locations and is safe if someone has a flat or mechanical issue and is not out in the middle of nowhere. Intermediate and Advanced road cycling Please tell your friends and I hope to see you on Sunday. BICYCLE RIDING IS AN INHERENTLY DANGEROUS SPECIFICALLY DISCLAIM RESPONSIBILITY FOR ANY ACCIDENT OR INJURY THAT OCCURS ON OUR RIDE. EVERY PERSON IS RESPONSIBLE FOR THEIR OWN SAFETY AND THE SAFETY OF OTHERS AROUND THEM. * this is a women’s only ride.. *",
+      "stravaUrl": "https://www.strava.com/clubs/1306157/group_events/1798339",
+      "isWomenOnly": true
+    }
+  ]
 }
