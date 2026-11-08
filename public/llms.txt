@@ -1,0 +1,27 @@
+# Women’s Shootout
+
+> A women’s road cycling community in Tucson, Arizona. Saturday morning group rides on the Shootout route, plus a Strava club and email list.
+
+Women’s Shootout (WSO) is a community road ride for women, trans, and femme cyclists with prior road and group-riding experience. It is distinct from the co-ed Shootout ride organized around Fair Wheel Bikes, though WSO rides with Fair Wheel’s blessing. The ride is free and is not a no-drop ride.
+
+## Rides
+
+- Every Saturday in Tucson.
+- Most Saturdays start at the MSA Annex, 267 S. Avenida del Convento.
+- Second Saturday of each month starts at University Avenue and Euclid Avenue (845 E. University Boulevard for GPS).
+- A group averages about 18–20 mph. A B group of about 15–17 mph rides when leaders are available.
+- Start times change seasonally. Confirm the current Strava event before leaving home.
+
+## Pages
+
+- [Home](https://laurendahlin1.github.io/womens-shootout/): Club overview, upcoming Strava rides, and Instagram.
+- [Ride FAQ](https://laurendahlin1.github.io/womens-shootout/faq/): Start times, locations, pace, route distances, what to bring.
+- [Founders Corner](https://laurendahlin1.github.io/womens-shootout/founders/): Leanda Cave and Pam Alexander.
+- [Rides and Events](https://laurendahlin1.github.io/womens-shootout/more-events/): Upcoming WSO rides, sister-club events, and Arizona racing.
+- [Contact](https://laurendahlin1.github.io/womens-shootout/contact/): Questions and ride-leader notes.
+
+## Elsewhere
+
+- [Strava club](https://www.strava.com/clubs/womensshootout): Ride announcements, routes, RSVPs, and cancellations.
+- [Instagram](https://www.instagram.com/womens.shootout.tucson/): @womens.shootout.tucson
+- Email: wso.tucson@gmail.com

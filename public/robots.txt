@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://laurendahlin1.github.io/womens-shootout/sitemap.xml

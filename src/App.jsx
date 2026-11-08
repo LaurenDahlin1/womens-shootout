@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
   CalendarBlank,
@@ -28,6 +28,7 @@ import {
 } from "./mailerlite.js";
 import { submitContactForm } from "./contactForm.js";
 import { pagePath, withBase } from "./paths.js";
+import { pageMeta } from "./siteMeta.js";
 
 const primaryNavItems = [
   { label: "The Ride", href: "/faq" },
@@ -275,7 +276,7 @@ function FoundersPage({ headerProps }) {
   return (
     <main className="interior-page founders-page">
       <SiteHeader {...headerProps} />
-      <InteriorHero eyebrow="The women who started it" title="Founders Corner" copy="Meet the Tucson women whose experience, generosity, and love of the road helped this community take shape." mark="FC" />
+      <InteriorHero eyebrow="The women who started it" title="Founders Corner" copy="Meet the Tucson women who founded this community in 2022 with experience, generosity, and a love of the road." mark="FC" />
       <section className="founders-list" aria-label="Women’s Shootout founders">
         <FounderCard initials="LC" name="Leanda Cave" instagramUrl="https://www.instagram.com/leandacave/">
           A four-time triathlon world champion who spent years living and training in Tucson, Leanda helped shape Women’s Shootout around the confidence and joy that grow when women ride hard together.
@@ -306,7 +307,7 @@ function MoreEventsPage({ headerProps, onEventAction, events }) {
   return (
     <main className="interior-page more-events-page">
       <SiteHeader {...headerProps} />
-      <InteriorHero eyebrow="Keep riding" title="More Events" copy="One place for upcoming Shootout rides, our sister clubs, and women-friendly racing around Arizona." mark="+" />
+      <InteriorHero eyebrow="Keep riding" title="Rides and More" copy="Upcoming Shootout rides, our sister clubs in Tucson, and women-friendly racing around Arizona." mark="+" />
       <div className="events-directory">
         <section className="event-directory-section">
           <div className="directory-heading"><p className="eyebrow">Women’s Shootout</p><h2>Upcoming</h2></div>
@@ -344,8 +345,8 @@ function MoreEventsPage({ headerProps, onEventAction, events }) {
           <div className="directory-heading">
             <p className="eyebrow">2027 tentative calendar</p>
             <h2>Local Women’s Rides and Races</h2>
-            <p>One clean listing per event, with multi-day races shown as date ranges. Confirm details with the organizer before you travel.</p>
-            <a className="calendar-source" href="https://www.azcycling.org/2027-calendar/" target="_blank" rel="noreferrer">View the source calendar <ArrowRight /></a>
+            <p>Competitive rides and races with women’s categories around Arizona.</p>
+            <a className="calendar-source" href="https://www.azcycling.org/2027-calendar/" target="_blank" rel="noreferrer">View the Arizona Bicycle Racing Association calendar <ArrowRight /></a>
           </div>
           <div className="local-event-list">
             {localCalendarEvents.map((event) => (
@@ -641,7 +642,22 @@ function ContactPage({ headerProps }) {
   );
 }
 
+function scrollFieldIntoModal(field) {
+  const target = field.closest("label") || field;
+  const scroller = field.closest(".signup-modal-scroll");
+  if (!scroller) return;
+  const fieldRect = target.getBoundingClientRect();
+  const scrollerRect = scroller.getBoundingClientRect();
+  const padding = 12;
+  if (fieldRect.bottom > scrollerRect.bottom - padding) {
+    scroller.scrollTop += fieldRect.bottom - scrollerRect.bottom + padding;
+  } else if (fieldRect.top < scrollerRect.top + padding) {
+    scroller.scrollTop -= scrollerRect.top - fieldRect.top + padding;
+  }
+}
+
 function SignupModal({ open, onClose }) {
+  const backdropRef = useRef(null);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
@@ -655,6 +671,58 @@ function SignupModal({ open, onClose }) {
       setComments("");
     }
   }, [open]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+
+    const { body } = document;
+    const scrollY = window.scrollY;
+    const previous = {
+      position: body.style.position,
+      top: body.style.top,
+      left: body.style.left,
+      right: body.style.right,
+      width: body.style.width,
+      overflow: body.style.overflow,
+    };
+    body.style.position = "fixed";
+    body.style.top = `-${scrollY}px`;
+    body.style.left = "0";
+    body.style.right = "0";
+    body.style.width = "100%";
+    body.style.overflow = "hidden";
+
+    function syncViewport() {
+      const viewport = window.visualViewport;
+      const backdrop = backdropRef.current;
+      if (!viewport || !backdrop) return;
+      backdrop.style.top = `${viewport.offsetTop}px`;
+      backdrop.style.height = `${viewport.height}px`;
+    }
+
+    syncViewport();
+    window.visualViewport?.addEventListener("resize", syncViewport);
+    window.visualViewport?.addEventListener("scroll", syncViewport);
+
+    return () => {
+      body.style.position = previous.position;
+      body.style.top = previous.top;
+      body.style.left = previous.left;
+      body.style.right = previous.right;
+      body.style.width = previous.width;
+      body.style.overflow = previous.overflow;
+      window.scrollTo(0, scrollY);
+      window.visualViewport?.removeEventListener("resize", syncViewport);
+      window.visualViewport?.removeEventListener("scroll", syncViewport);
+    };
+  }, [open]);
+
+  function keepFieldVisible(event) {
+    const field = event.target;
+    if (!(field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement)) return;
+    scrollFieldIntoModal(field);
+    window.setTimeout(() => scrollFieldIntoModal(field), 320);
+  }
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -689,7 +757,7 @@ function SignupModal({ open, onClose }) {
   if (!open) return null;
 
   return (
-    <div className="modal-backdrop" role="presentation" onMouseDown={onClose}>
+    <div className="modal-backdrop" ref={backdropRef} role="presentation" onMouseDown={onClose}>
       <section className="signup-modal" role="dialog" aria-modal="true" aria-labelledby="join-title" onMouseDown={(event) => event.stopPropagation()}>
         <button className="icon-button modal-close" onClick={onClose} aria-label="Close join form"><X size={22} /></button>
         {submitted ? (
@@ -701,47 +769,65 @@ function SignupModal({ open, onClose }) {
             <button className="button button-primary" onClick={onClose}>Done</button>
           </div>
         ) : (
-          <>
-            <p className="eyebrow">Join Email List</p>
-            <h2 id="join-title">Your Saturday crew is waiting.</h2>
-            <p>Stay up to date on our rides and women’s road cycling in Arizona. 1-2 emails per month.</p>
-            <form onSubmit={handleSubmit} noValidate>
-              <div className="signup-name-row">
-                <label>First Name<input name="first_name" required autoComplete="given-name" placeholder="First name" autoFocus /></label>
-                <label>Last Name<input name="last_name" required autoComplete="family-name" placeholder="Last name" /></label>
+          <form onSubmit={handleSubmit} noValidate onFocus={keepFieldVisible}>
+            <div className="signup-modal-scroll">
+              <p className="eyebrow">Join Email List</p>
+              <h2 id="join-title">Your Saturday crew is waiting.</h2>
+              <p className="signup-intro">Stay up to date on our rides and women’s road cycling in Arizona. 1-2 emails per month.</p>
+              <div className="signup-modal-fields">
+                <div className="signup-name-row">
+                  <label>First Name<input name="first_name" required autoComplete="given-name" placeholder="First name" /></label>
+                  <label>Last Name<input name="last_name" required autoComplete="family-name" placeholder="Last name" /></label>
+                </div>
+                <label>Email
+                  <input
+                    name="email"
+                    type="email"
+                    required
+                    autoComplete="email"
+                    inputMode="email"
+                    placeholder="you@example.com"
+                    onChange={() => { if (error) setError(""); }}
+                  />
+                </label>
+                <label>Any questions or comments for us? (Optional)
+                  <textarea
+                    name="comments"
+                    rows={4}
+                    maxLength={COMMENT_MAX_LENGTH}
+                    value={comments}
+                    onChange={(event) => setComments(truncateComments(event.target.value))}
+                    placeholder="Optional"
+                  />
+                  <span className="comment-count">{comments.length}/{COMMENT_MAX_LENGTH}</span>
+                </label>
               </div>
-              <label>Email
-                <input
-                  name="email"
-                  type="email"
-                  required
-                  autoComplete="email"
-                  inputMode="email"
-                  placeholder="you@example.com"
-                  onChange={() => { if (error) setError(""); }}
-                />
-              </label>
-              <label>Any questions or comments for us? (Optional)
-                <textarea
-                  name="comments"
-                  rows={4}
-                  maxLength={COMMENT_MAX_LENGTH}
-                  value={comments}
-                  onChange={(event) => setComments(truncateComments(event.target.value))}
-                  placeholder="Optional"
-                />
-                <span className="comment-count">{comments.length}/{COMMENT_MAX_LENGTH}</span>
-              </label>
+            </div>
+            <div className="signup-modal-footer">
               {error ? <p className="form-error" role="alert">{error}</p> : null}
               <button className="button button-primary full-button" type="submit" disabled={submitting}>
                 {submitting ? "Submitting..." : "Submit"}
               </button>
-            </form>
-          </>
+            </div>
+          </form>
         )}
       </section>
     </div>
   );
+}
+
+const INSTAGRAM_CAPTION_MAX_LENGTH = 300;
+
+function truncateCaption(text, maxLength = INSTAGRAM_CAPTION_MAX_LENGTH) {
+  const normalized = String(text || "").replace(/\s+/g, " ").trim();
+  if (normalized.length <= maxLength) return normalized;
+
+  let cut = normalized.slice(0, maxLength);
+  if (/\S/.test(normalized.charAt(maxLength))) {
+    const lastSpace = cut.lastIndexOf(" ");
+    if (lastSpace > 0) cut = cut.slice(0, lastSpace);
+  }
+  return `${cut.replace(/[,;:\s]+$/, "")}…`;
 }
 
 function InstagramPost({ post }) {
@@ -757,7 +843,7 @@ function InstagramPost({ post }) {
       {post.permalink ? (
         <a href={post.permalink} target="_blank" rel="noreferrer" aria-label="View this post on Instagram">{image}</a>
       ) : image}
-      <p>{post.caption}</p>
+      <p>{truncateCaption(post.caption)}</p>
       {(post.likes != null || post.comments != null) && (
         <div className="social-stats">
           {post.likes != null ? <span><Heart color="#f4512f" /> {post.likes}</span> : null}
@@ -774,6 +860,10 @@ export function App() {
   const [toast, setToast] = useState("");
   const { events, instagramPosts } = useFeedData();
   const pathname = pagePath();
+
+  useEffect(() => {
+    document.title = pageMeta(pathname).title;
+  }, [pathname]);
 
   function showToast(message) {
     setToast(message);
@@ -843,6 +933,9 @@ export function App() {
         ) : (
           <EmptyFeed title="Upcoming rides">Public Strava events will appear here when the live club feed is connected.</EmptyFeed>
         )}
+        <p className="events-more">
+          <a href={withBase("/more-events")}>View more events for women cyclists. <ArrowRight /></a>
+        </p>
       </section>
 
       <section className="community-section section-shell" id="community">
