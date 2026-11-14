@@ -1,16 +1,6 @@
 {
-  "fetchedAt": "2026-11-14T12:07:55.122Z",
+  "fetchedAt": "2026-11-14T16:05:51.425Z",
   "upcoming": [
-    {
-      "id": "3547037715729017000",
-      "clubName": "Women’s Shootout",
-      "title": "University and Euclid Start Women's Shootout 11/14 7:30am",
-      "startsAt": "2026-11-14T14:30:00.000Z",
-      "timezone": "America/Phoenix",
-      "description": "New experimental start, BIG Shootout energy! 🚴‍♀️🔥 In an effort to grow the Women’s Shootout and promote women’s cycling, we’re experimenting with a new start location on the second Saturday of each month! 📍 University & Euclid 🕖 Please arrive by 7:30 AM 🚴‍♀️ Rollout around 7:37 AM, just after the “Old Man” group of the main Shootout. We’re trying this out with the blessing of Fair Wheel Bikes, and we’re excited to see how it goes! To the men reading this who ride the co-ed Shootout: Help us spread the word to women who might want to join! And please give our group a little space as we roll out so we can stay together. New to WSO? Look for the helmet with the hot pink mohawk! 💗 Let’s get more women riding the Shootout! 💪",
-      "stravaUrl": "https://www.strava.com/clubs/1245841/group_events/3547037715729017000",
-      "isWomenOnly": true
-    },
     {
       "id": "3547037656259754500",
       "clubName": "Women’s Shootout",
@@ -20,9 +10,7 @@
       "description": "RSVP here to let us know you will be on the 102 mile route! There is a separate event for the 62 mile (metric century) distance. We will be cheering for you!",
       "stravaUrl": "https://www.strava.com/clubs/1245841/group_events/3547037656259754500",
       "isWomenOnly": true
-    }
-  ],
-  "additionalShootout": [
+    },
     {
       "id": "3547037610275170000",
       "clubName": "Women’s Shootout",
@@ -32,7 +20,9 @@
       "description": "RSVP here to let us know you will be on the 62 mile route! There is a separate event for the 102 mile (century) distance. We will be cheering for you!",
       "stravaUrl": "https://www.strava.com/clubs/1245841/group_events/3547037610275170000",
       "isWomenOnly": true
-    },
+    }
+  ],
+  "additionalShootout": [
     {
       "id": "3547037543494117000",
       "clubName": "Women’s Shootout",
