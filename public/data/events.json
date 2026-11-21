@@ -1,28 +1,6 @@
 {
-  "fetchedAt": "2026-11-21T12:08:26.434Z",
+  "fetchedAt": "2026-11-21T16:06:18.321Z",
   "upcoming": [
-    {
-      "id": "3547037656259754500",
-      "clubName": "Women’s Shootout",
-      "title": "WSO 102 Miles @El Tour de Tucson 11/21 7am",
-      "startsAt": "2026-11-21T14:00:00.000Z",
-      "timezone": "America/Phoenix",
-      "description": "RSVP here to let us know you will be on the 102 mile route! There is a separate event for the 62 mile (metric century) distance. We will be cheering for you!",
-      "stravaUrl": "https://www.strava.com/clubs/1245841/group_events/3547037656259754500",
-      "isWomenOnly": true
-    },
-    {
-      "id": "3547037610275170000",
-      "clubName": "Women’s Shootout",
-      "title": "WSO 62 Miles @El Tour de Tucson 11/21 9am",
-      "startsAt": "2026-11-21T16:00:00.000Z",
-      "timezone": "America/Phoenix",
-      "description": "RSVP here to let us know you will be on the 62 mile route! There is a separate event for the 102 mile (century) distance. We will be cheering for you!",
-      "stravaUrl": "https://www.strava.com/clubs/1245841/group_events/3547037610275170000",
-      "isWomenOnly": true
-    }
-  ],
-  "additionalShootout": [
     {
       "id": "3547037543494117000",
       "clubName": "Women’s Shootout",
@@ -42,7 +20,9 @@
       "description": "Celebrate the season with a morning on the bike, followed by coffee, food, and good company at Pace Ranch! Hosted by Women’s Shootout Tucson, this co-ed event welcomes all Tucson road cyclists who are comfortable riding in a group. Please RSVP on Eventbrite to help us get a head count for coffee and food. https://www.eventbrite.com/e/co-ed-holiday-ride-party-presented-by-womens-shootout-tucson-tickets-2004863494682 📍 Pace Ranch: 12680 E. Fort Lowell Rd. 🚲 8:00am — Ride out Choose your adventure: - Mount Lemmon | 20–28 miles: The base of the mountain is about 4 miles from Pace Ranch. Climb at your own pace and choose your turnaround point so you’re back at the ranch by 10:30am. Mount Lemmon route: https://ridewithgps.com/routes/57891731 - Saguaro East | 26 miles: Enjoy a desert ride before heading back to the ranch for the festivities. Saguaro East route: https://ridewithgps.com/routes/57891597 ☕ 10:00am — Coffee, food & mingling The food will be out by 10am, ready for riders as they return. Plan to be back by 10:30am so you have plenty of time to eat and catch up! Bring your riding buddies and come spend a festive morning with us! 🎄",
       "stravaUrl": "https://www.strava.com/clubs/1245841/group_events/3547037482119763500",
       "isWomenOnly": true
-    },
+    }
+  ],
+  "additionalShootout": [
     {
       "id": "3547037237035420700",
       "clubName": "Women’s Shootout",
