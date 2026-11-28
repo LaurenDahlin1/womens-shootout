@@ -1,16 +1,6 @@
 {
-  "fetchedAt": "2026-11-28T12:08:14.349Z",
+  "fetchedAt": "2026-11-28T16:06:06.331Z",
   "upcoming": [
-    {
-      "id": "3547037543494117000",
-      "clubName": "Women’s Shootout",
-      "title": "FROM THE ANNEX Women's Shootout 11/28 7:30am",
-      "startsAt": "2026-11-28T14:30:00.000Z",
-      "timezone": "America/Phoenix",
-      "description": "We will start in front of the Mercado Annex. They have graciously allowed us to use their bathrooms. There is no official B group this week, but we are always happy to have a B group if the B ladies are okay with not having an official ride leader. If you would like to be a B group leader, please let us know and we will officially advertise it. This ride is every week, but we individually list each ride. Regular info below. *** FAQ How fast? The \"A\" group averages 18-20mph. On the second Saturday only, we also have a \"B\" group that averages 15-17mph. No drop? This is NOT a no drop ride. However, we wait five minutes to regroup at The Bridge (Mile 15.5) and Sprint Hill (Mile 26). These are also our sprint points for \"friendly competition.\" What can I expect? We usually ride in two lines and rotate. The rider at the front right is in the wind and doing the most work. When you’re ready to pull off, or if you can’t hold the group’s speed, move left and slide back into the left-hand line. Pulls can be long or short. How long? The full shootout route is 65 miles, but most of us ride to Sprint Hill, which is 49. The shorter turnaround points you can do are: The Bridge (32 miles total distance) and Helmet Peak Rd (42 miles). Where? We roll from in front of the MSA Annex, a couple blocks from the Mercado San Augustin. When? The time changes with the seasons/sunrise. Check our Strava event for the exact time. Parking? There is paid parking in the Mercado parking lots and free parking on side streets. Stops/refueling? Ladies doing the full route will stop at a gas station about halfway through. If you are planning to turn around earlier, plan to carry all of your nutrition and hydration. Other questions? Interested in becoming a ride leader? Email wso [dot] tucson [at] gmail",
-      "stravaUrl": "https://www.strava.com/clubs/1245841/group_events/3547037543494117000",
-      "isWomenOnly": true
-    },
     {
       "id": "3561074150384075000",
       "clubName": "Women’s Shootout",
@@ -20,9 +10,7 @@
       "description": "We will start in front of the Mercado Annex. They have graciously allowed us to use their bathrooms. There is no official B group this week, but we are always happy to have a B group if the B ladies are okay with not having an official ride leader. If you would like to be a B group leader, please let us know and we will officially advertise it. This ride is every week, but we individually list each ride. Regular info below. *** FAQ How fast? The \"A\" group averages 18-20mph. On the second Saturday only, we also have a \"B\" group that averages 15-17mph. No drop? This is NOT a no drop ride. However, we wait five minutes to regroup at The Bridge (Mile 15.5) and Sprint Hill (Mile 26). These are also our sprint points for \"friendly competition.\" What can I expect? We usually ride in two lines and rotate. The rider at the front right is in the wind and doing the most work. When you’re ready to pull off, or if you can’t hold the group’s speed, move left and slide back into the left-hand line. Pulls can be long or short. How long? The full shootout route is 65 miles, but most of us ride to Sprint Hill, which is 49. The shorter turnaround points you can do are: The Bridge (32 miles total distance) and Helmet Peak Rd (42 miles). Where? We roll from in front of the MSA Annex, a couple blocks from the Mercado San Augustin. When? The time changes with the seasons/sunrise. Check our Strava event for the exact time. Parking? There is paid parking in the Mercado parking lots and free parking on side streets. Stops/refueling? Ladies doing the full route will stop at a gas station about halfway through. If you are planning to turn around earlier, plan to carry all of your nutrition and hydration. Other questions? Interested in becoming a ride leader? Email wso [dot] tucson [at] gmail",
       "stravaUrl": "https://www.strava.com/clubs/1245841/group_events/3561074150384075000",
       "isWomenOnly": true
-    }
-  ],
-  "additionalShootout": [
+    },
     {
       "id": "3547037482119763500",
       "clubName": "Women’s Shootout",
@@ -32,7 +20,9 @@
       "description": "Celebrate the season with a morning on the bike, followed by coffee, food, and good company at Pace Ranch! Hosted by Women’s Shootout Tucson, this co-ed event welcomes all Tucson road cyclists who are comfortable riding in a group. Please RSVP on Eventbrite to help us get a head count for coffee and food. https://www.eventbrite.com/e/co-ed-holiday-ride-party-presented-by-womens-shootout-tucson-tickets-2004863494682 📍 Pace Ranch: 12680 E. Fort Lowell Rd. 🚲 8:00am — Ride out Choose your adventure: - Mount Lemmon | 20–28 miles: The base of the mountain is about 4 miles from Pace Ranch. Climb at your own pace and choose your turnaround point so you’re back at the ranch by 10:30am. Mount Lemmon route: https://ridewithgps.com/routes/57891731 - Saguaro East | 26 miles: Enjoy a desert ride before heading back to the ranch for the festivities. Saguaro East route: https://ridewithgps.com/routes/57891597 ☕ 10:00am — Coffee, food & mingling The food will be out by 10am, ready for riders as they return. Plan to be back by 10:30am so you have plenty of time to eat and catch up! Bring your riding buddies and come spend a festive morning with us! 🎄",
       "stravaUrl": "https://www.strava.com/clubs/1245841/group_events/3547037482119763500",
       "isWomenOnly": true
-    },
+    }
+  ],
+  "additionalShootout": [
     {
       "id": "3547037237035420700",
       "clubName": "Women’s Shootout",
